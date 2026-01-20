@@ -1,11 +1,11 @@
 {
-    "name": "HID Keyboard",
+    "name": "Corne42_XiaoBle",
     "vendorId": "0x4C4B",
     "productId": "0x4643",
     "lighting": "none",
     "matrix": {
         "rows": 4,
-        "cols": 3
+        "cols": 12
     },
     "layouts": {
         "keymap": [
