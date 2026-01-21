@@ -16,22 +16,63 @@ output_pins = ["PIN_19", "PIN_20", "PIN_21"]
 
 [layout]
 rows = 4
-cols = 3
-layers = 2
+cols = 12
+layers = 3
 keymap = [
     [
-        ["A", "B", "C"],
-        ["Kc1", "Kc2", "Kc3"],
-        ["LCtrl", "MO(1)", "LShift"],
-        ["OSL(1)", "LT(2, Kc9)", "LM(1, LShift | LGui)"]
+        ["_", "_", "_","_","_","_","_","_","_","_","_","_"],
+        ["_", "_", "_","_","_","_","_","_","_","_","_","_"],
+        ["_", "_", "_","_","_","_","_","_","_","_","_","_"],
+        ["_", "_", "_","_","_","_","_","_","_","_","_","_"]
     ],
     [
-        ["_", "TT(1)", "TG(2)"],
-        ["_", "_", "_"],
-        ["_", "_", "_"],
-        ["_", "_", "_"]
+        ["_", "_", "_","_","_","_","_","_","_","_","_","_"],
+        ["_", "_", "_","_","_","_","_","_","_","_","_","_"],
+        ["_", "_", "_","_","_","_","_","_","_","_","_","_"],
+        ["_", "_", "_","_","_","_","_","_","_","_","_","_"]
+    ],
+    [
+        ["_", "_", "_","_","_","_","_","_","_","_","_","_"],
+        ["_", "_", "_","_","_","_","_","_","_","_","_","_"],
+        ["_", "_", "_","_","_","_","_","_","_","_","_","_"],
+        ["_", "_", "_","_","_","_","_","_","_","_","_","_"]
     ],
 ]
+
+[split]
+connection = "ble"
+[ble]
+enabled = true
+battery_adc_pin = "vddh"
+
+
+[split.central]
+rows = 4
+cols = 6
+row_offset = 0
+col_offset = 0
+ble_addr = [0x18, 0xe2, 0x21, 0x80, 0xc0, 0xc7]
+
+[split.central.matrix]
+matrix_type = "normal"
+# RMK uses col2row as the default matrix diode direction, if you want to use a row2col matrix, add `row2col = true`
+# row2col = true
+row_pins = ["P0_02", "P0_03", "P0_28", "P0_29"]
+col_pins = ["P1_11", "P1_12", "P1_13", "P1_14", "P1_15", "P0_10"]
+
+[[split.peripheral]]
+rows = 4
+cols = 6
+row_offset = 0
+col_offset = 6
+ble_addr = [0x7e, 0xfe, 0x73, 0x9e, 0x66, 0xe3]
+
+[split.peripheral.matrix]
+matrix_type = "normal"
+row_pins = ["P0_02", "P0_03", "P0_28", "P0_29"]
+col_pins = ["P1_11", "P1_12", "P1_13", "P1_14", "P1_15", "P0_10"]
+
+nfc-pins-as-gpio = ["P_10"]
 
 [light]
 # All light pins are high-active by default, uncomment if you want it to be low-active
@@ -42,8 +83,6 @@ keymap = [
 # Just ignore if no light pin is used for it
 # numslock.pin = "PA5"
 # numslock.low_active = true
-
-
 
 [storage]
 # Storage feature is enabled by default
