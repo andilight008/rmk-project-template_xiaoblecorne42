@@ -5,7 +5,7 @@ product_name = "Corne42_XiaoBle"
 vendor_id = 0x4c4b
 product_id = 0x4643
 manufacturer = "Andy"
-board = "XIAO_BLE"
+board = "XIAO BLE"
 
 [layout]
 rows = 4
