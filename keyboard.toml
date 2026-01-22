@@ -51,7 +51,7 @@ connection = "ble"
 
 [ble]
 enabled = true
-battery_adc_pin = "P0.14"
+battery_adc_pin = "P0_14"
 
 
 [split.central]
