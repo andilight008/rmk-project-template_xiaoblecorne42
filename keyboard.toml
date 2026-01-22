@@ -44,14 +44,19 @@ keymap = [
     ],
 ]
 
-nfc-pins-as-gpio = ["P_10"]
+nfc-pins-as-gpio = ["P0_10"]
 
 [split]
 connection = "ble"
 
 [ble]
 enabled = true
+# vddh has an internal voltage divider
+# battery_adc_pin = "vddh"
+# Or
 battery_adc_pin = "P0_14"
+adc_divider_measured = 2000
+adc_divider_total = 2806
 
 
 [split.central]
