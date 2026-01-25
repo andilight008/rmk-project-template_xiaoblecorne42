@@ -57,6 +57,7 @@ battery_adc_pin = "vddh"
 # battery_adc_pin = "P0_04"
 # adc_divider_measured = 2000
 # adc_divider_total = 2806
+use_2m_phy = false
 
 
 [split.central]
