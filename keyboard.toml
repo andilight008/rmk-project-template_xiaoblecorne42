@@ -7,6 +7,7 @@ product_id = 0x4643
 manufacturer = "andy"
 chip = "nrf52840"
 
+
 [layout]
 rows = 4
 cols = 12
