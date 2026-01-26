@@ -55,9 +55,9 @@ enabled = true
 # vddh has an internal voltage divider
 # battery_adc_pin = "vddh"
 # Or
-battery_adc_pin = "P0_14"
-adc_divider_measured = 2000
-adc_divider_total = 2806
+battery_adc_pin = "P0_31"
+adc_divider_measured = 510
+adc_divider_total = 1510
 ble_use_2m_phy = false
 
 
@@ -93,6 +93,7 @@ col_pins = ["P1_11", "P1_12", "P1_13", "P1_14", "P1_15", "P0_10"]
 # capslock.low_active = true
 # scrolllock.pin = "PA3"
 # scrolllock.low_active = true
+scrolllock = { pin = "P0_14", low_active = false }
 # Just ignore if no light pin is used for it
 # numslock.pin = "PA5"
 # numslock.low_active = true
